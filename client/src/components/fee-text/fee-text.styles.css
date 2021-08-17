@@ -1,0 +1,9 @@
+.expected_fee {
+  padding-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Avenirltstd book", sans-serif;
+  color: #141414;
+  line-height: 24px;
+  font-weight: 300;
+}
