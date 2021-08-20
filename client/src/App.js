@@ -1,6 +1,7 @@
 import React from 'react';
-import { InputBox } from './components/Input-box/input-box.components';
-import { FeeDisplay } from './components/fee-text/fee-text.components';
+import { InputBox } from './components/Input-box/input-box.component';
+import { FeeDisplay } from './components/fee-text/fee-text.component';
+import { NavBar } from './components/nav-bar/nav-bar.component';
 import './App.css';
 
 class App extends React.Component {
@@ -25,6 +26,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <NavBar/>
         <div className="fee_title">Enter your estimated pension below to calculate our fees.</div>
           <p className="symbol">£
             <InputBox
@@ -32,7 +34,6 @@ class App extends React.Component {
               handleChange={this.handleChange}
             />
         </p>
-        
         <FeeDisplay
           fee={this.state.pensionFee}
         />

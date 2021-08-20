@@ -15,11 +15,12 @@ function calculatePensionFees(res, req) {
         let value = (((x / 10000)*4.67)+62.5).toFixed(2);
         return res.json({fee: value});
     } else {
+        // fee = ((6.25/10000)*fee).toFixed(2);
         fee = (0.000625*fee).toFixed(2);
         return res.json({fee: fee});
     }
 }
 
 // PORT
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 7000;
 app.listen(port, () => console.log(`listening on port ${port}...`));
